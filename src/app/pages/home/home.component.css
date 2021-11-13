@@ -1,0 +1,33 @@
+button{
+    margin-left: 15%;
+    margin-right: 10%;
+    
+}
+.margin {
+    margin-top: 15px;
+}
+h4{
+    text-align: center;
+}
+.text {
+    text-align: center;
+    margin-top: 20%;
+    color: rgb(19, 19, 114);
+    font-size: 50px;
+}
+.background {
+    background-color: rgb(250, 243, 235);
+}
+
+.win {
+    text-align: center;
+    letter-spacing: 2;
+    left: 50%;
+    top: 50%;
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #020753;
+    text-shadow: 0 0 0.1rem #e6f9ff,  0 0.1rem;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  

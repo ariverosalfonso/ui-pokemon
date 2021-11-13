@@ -1,0 +1,77 @@
+<div class="container">
+    <h4>Selecciona los 2 Pokemones que se van a enfrentar y de clic en el botón</h4>
+    <div class="row">
+        <div class="col" size="10">
+            <h2>Lista de Pokemons</h2>
+            <p>Si desea otra batalla Debe dar clic en el botón <strong>nueva batalla, se preparará tu batalla completa</strong></p>
+        </div>
+        <div class="col" size="2">
+            <div>
+                <h2>Pokemones a enfrentarse</h2> 
+            </div>
+            <div *ngFor="let pokemonFighting of pokemonsToFight">
+                <p>
+                    <strong>Seleccionaste:</strong>
+                    {{pokemonFighting.name}}
+
+                </p>
+
+            </div>
+
+            <button  (click)="fight()" type="button" class="btn btn-primary">Iniciar Batalla</button>
+             <button  (click)="clear()" type="button" class="btn btn-danger">Nueva Batalla</button> 
+        </div>
+    </div>
+   
+
+    <div class="row ">
+        <div class="col-md-3">  <app-pokemon *ngFor="let poke of pokemons.slice(0,10) " [pokemon]="poke" (pokemonSelected)="pokemonSelected($event)"></app-pokemon></div>
+        <div class="col-md-3">  <app-pokemon *ngFor="let poke of pokemons.slice(10,20)" [pokemon]="poke" (pokemonSelected)="pokemonSelected($event)"></app-pokemon></div>
+  
+      <div class="col background margin" size="6">      
+
+          <div *ngIf="showTable">
+            <div class="row margin" >
+                <div class="col-5" >
+                    <app-pokemon   [pokemon]="pokemonsToFightCard[0]"></app-pokemon>
+                </div>
+                <div class="col-2 text">
+                    VS
+                </div>
+                <div class="col-5" > 
+                    <app-pokemon  [pokemon]="pokemonsToFightCard[1]"></app-pokemon>
+                </div>
+            </div>
+        
+                <table class="table" *ngIf="showTable">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th scope="col">Pokemon</th>
+                        <th scope="col">Puntaje</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>{{pokemon1}}</td>
+                        <td>{{score1}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>{{pokemon2}}</td>
+                        <td>{{score2}}</td>
+                      </tr>
+                   
+                    </tbody>
+                </table>
+   
+            <p class="win">
+                {{winner}}
+            </p>
+          </div>
+
+      </div>
+      
+    </div>
+  </div>

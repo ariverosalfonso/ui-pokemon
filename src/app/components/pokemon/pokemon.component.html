@@ -1,0 +1,10 @@
+
+<div class="card" (click)="selectPokemon()" >
+    
+        <img class="card-img-top" [src]="pokemonData?.sprites.front_default" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Name: {{pokemonData?.name}} </h5>
+          <p class="card-text"><small class="text-muted">Id:  {{pokemonData?.id}}</small></p>
+        </div>
+     
+</div>
