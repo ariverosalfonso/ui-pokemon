@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Se uso bootstrap y css
+El proyecto cuenta con dos environments
+En los components se encuentra la carpeta pokemon, donde esta la tarjeta principal que se visualiza en el home, hay componentes compartidos como el navbar.
+En la parte de servicios se llama la api creada y esta se importa en los respectivos componentes
